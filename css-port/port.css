@@ -39,6 +39,13 @@ ul {
     margin-right: auto;
 }
 
+@media (max-width: 991px) {
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
 /* Small */
 @media (min-width: 768px) {
     .container {
@@ -70,6 +77,12 @@ ul {
     position: relative;
     z-index: 1;
     transition: var(--main-transiton);
+}
+
+@media (max-width: 991px) {
+    .main-title {
+        font-size: 25px;
+    }
 }
 
 .main-title::before, .main-title::after {
@@ -126,7 +139,6 @@ ul {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 40px;
 }
 
 @media (max-width: 991px) {
@@ -165,12 +177,15 @@ ul {
         min-width: 200px;
         position: absolute;
         right: 0;
-        top: calc(100% + 15px);
+        top: calc(101%);
         background-color: #f6f6f6;
         padding-left: 0;
     }
     .header .container .mhover:hover .main-nav {
         display: block;
+    }
+    .icon-00 {
+        display: none;
     }
 }
 
@@ -304,8 +319,6 @@ ul {
     }
 }
 
-
-
 @media (max-width: 991px) {
     .header .container .icon {
         position: absolute;
@@ -316,9 +329,13 @@ ul {
         transition: var(--main-transiton);
     }
     .header .container .social {
-        right: 50px;
+        right: 23%;
         position: relative;
         transition: var(--main-transiton);
+        gap: 27%;
+    }
+    .header .container .social a {
+        font-size: 20px;
     }
 }
 
@@ -326,6 +343,15 @@ ul {
     .header .container .icon {
         display: none;
     }
+}
+
+.reveal {
+    opacity: 0;
+    transition: 1s all ease
+}
+
+.reveal.active {
+    opacity: 1;
 }
 
 /* end header */
@@ -611,6 +637,14 @@ ul {
     transition: var(--main-transiton);
 }
 
+@media (max-width: 991px){
+    .landing .container .box-1 h2 {
+    font-size: 40px;
+    padding: 5px;
+    padding-top: 7%;
+    }
+}
+
 .landing .container .box-1 h4 {
     font-weight: normal;
     padding-left: 10px;
@@ -761,6 +795,20 @@ ul {
     .projects {
         margin-top: -10px
     }
+    .landing .container .box-2 p {
+    color: #777;
+    line-height: 1.5;
+    width: 100%;
+    font-weight: normal;
+}
+.landing .container .box-1 p {
+    display: none;
+    font-weight: normal;
+    color: #777;
+    line-height: 1.7;
+    width: 110%;
+    padding-bottom: 10%;
+}
 }
 
 .projects .container {
@@ -899,6 +947,12 @@ ul {
 @media (max-width: 991px) {
     .our-skills img {
         display: none;
+    }
+    .landing .container .box-2 .img-holder {
+        display: none;
+        width: 0;
+        margin-left: 0;
+        margin-top: 0;
     }
 }
 
@@ -1606,22 +1660,22 @@ ul {
 }
 
 .footer .text-4 .facebook:hover {
-    background-color: #1877f2;
+    /* background-color: #1877f2; */
     transition: var(--main-transiton);
 }
 
 .footer .text-4 .linkedin:hover {
-    background-color: #0a66c2;
+    /* background-color: #0a66c2; */
     transition: var(--main-transiton);
 }
 
 .footer .text-4 .instagram:hover {
-    background-color: #810061;
+    /* background-color: #810061; */
     transition: var(--main-transiton);
 }
 
 .footer .text-4 .twitter:hover {
-    background-color: #1da1f2;
+    /* background-color: #1da1f2; */
     transition: var(--main-transiton);
 }
 
@@ -1792,6 +1846,25 @@ ul {
   -webkit-text-stroke: 1px var(--text-stroke-color);
 }
 
+@media (max-width: 991px){
+.button {
+  --border-right: 4px;
+  --text-stroke-color: rgb(10 10 10 / 60%);
+  --animation-color: var(--main-color);
+  --fs-size: 1.5em;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Arial";
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  transition: 0.8s;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+  left: -15px;
+}
+}
+
 .hover-text {
   position: absolute;
   box-sizing: border-box;
@@ -1817,8 +1890,9 @@ ul {
 
 @media(max-width: 991px) {
     .header {
-        height: 70px;
-        display: flex;
+        height: 60px;
+        display: block;
+        padding: 4%;
     }
     .header .container {
         gap: 75px   ;
@@ -1834,21 +1908,26 @@ ul {
     }
     .landing .container .box-1 a {
         top: 105%;
+        display: none;
     }
     .landing::before {
-        height: 128%;
+        height: 145%;
     }
     .projects {
         padding-top: 180px;
     }
     .landing .container .box-2 .text-2 {
-    transform: translateY(40%);
+        transform: translateY(40%);
+        padding-left: 10px;
+        margin-top: -25%;
     }
     .landing .container .box-2 a {
-    top: 104%;
+    top: 109%;
+    left: 25%;
     }
     .landing .container .icon-00 i {
-        transform: translateY(23.5vh);
+        transform: translateY(36.5vh);
+        font-size: 30px;
     }
 }
 
